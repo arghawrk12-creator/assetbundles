@@ -1,0 +1,14 @@
+resources:
+  jobs:
+    manual_job:
+      name: manual_job
+      tasks:
+        - task_key: manual-job
+          notebook_task:
+            notebook_path: ../../src/notebooks/injestion.ipynb
+            base_parameters:
+              catalog_name: ${var.catalog_name}
+            source: WORKSPACE
+      queue:
+        enabled: true
+      performance_target: PERFORMANCE_OPTIMIZED
