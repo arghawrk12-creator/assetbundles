@@ -1,0 +1,4 @@
+variables:
+  catalog_name:
+    description: The ID of an existing cluster.
+    default: assetbundles
